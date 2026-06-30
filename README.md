@@ -24,23 +24,26 @@
 
 ```
 dsync/
-├── README.md
+├── README.md                 ★ submission
 ├── benchmark.py              ← Performance scenarios (DO NOT MODIFY)
 ├── conftest.py
 ├── starter/
-│   ├── dsync_protocol.py     ← SegHash · frame encoding · fragmentation
-│   ├── sht.py                ← 4-ary Segment Hash Tree
-│   ├── bloom_filter.py       ← Counting Bloom Filter (4-bit saturating)
-│   ├── worker.py             ← Worker coroutine · VectorClock
-│   ├── engine.py             ← DSyncEngine coordinator
+│   ├── dsync_protocol.py     ★ SegHash · frame encoding · fragmentation
+│   ├── sht.py                ★ 4-ary Segment Hash Tree
+│   ├── bloom_filter.py       ★ Counting Bloom Filter (4-bit saturating)
+│   ├── worker.py             ★ Worker coroutine · VectorClock
+│   ├── engine.py             ★ DSyncEngine coordinator
 │   └── utils.py              ← Dataset helpers (DO NOT MODIFY)
 └── tests/
-    ├── test_protocol.py      ← SegHash and frame encoding tests
-    ├── test_sht.py           ← SHT correctness tests
-    ├── test_bloom.py         ← Bloom filter tests
-    ├── test_integration.py   ← End-to-end engine tests
-    └── test_worker_smoke.py  ← VectorClock and Worker unit tests
+    ├── test_protocol.py      ← SegHash and frame encoding tests (DO NOT MODIFY)
+    ├── test_sht.py           ← SHT correctness tests (DO NOT MODIFY)
+    ├── test_bloom.py         ← Bloom filter tests (DO NOT MODIFY)
+    ├── test_integration.py   ← End-to-end engine tests (DO NOT MODIFY)
+    ├── test_worker_smoke.py  ← VectorClock and Worker unit tests (DO NOT MODIFY)
+    └── test_chaos.py         ★ Chaos / adversarial hardening suite
 ```
+
+**★ = files to submit.** All other files are provided by Gentrix and must not be modified.
 
 ---
 
@@ -370,7 +373,7 @@ The Dense scenario (128 MB, 16 workers, 3,000 changed chunks) completes in ~366 
 
 ## 10. Resilience, Security & Chaos Testing
 
-Beyond the 75 correctness tests, a dedicated chaos suite (`tests/test_chaos.py`) was written to reproduce and verify fixes for twelve protocol-level vulnerabilities identified during a static architecture review. The suite runs 45 additional tests covering the following categories:
+Beyond the 70 correctness tests, a dedicated chaos suite (`tests/test_chaos.py`) was written to reproduce and verify fixes for twelve protocol-level vulnerabilities identified during a static architecture review. The suite runs 45 additional tests covering the following categories:
 
 ### Zero-length and malformed payloads
 
