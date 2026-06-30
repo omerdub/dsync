@@ -25,31 +25,37 @@
 ```
 dsync/
 ├── README.md                 ★ written
-├── benchmark.py              ← provided (DO NOT MODIFY)
-├── conftest.py               ← provided (DO NOT MODIFY)
-├── starter/
-│   ├── __init__.py           ← provided
-│   ├── dsync_protocol.py     ★ SegHash · frame encoding · fragmentation
-│   ├── sht.py                ★ 4-ary Segment Hash Tree
-│   ├── bloom_filter.py       ★ Counting Bloom Filter (4-bit saturating)
-│   ├── worker.py             ★ Worker coroutine · VectorClock
-│   ├── engine.py             ★ DSyncEngine coordinator
-│   └── utils.py              ← provided (DO NOT MODIFY)
-└── tests/
-    ├── __init__.py           ← provided
-    ├── test_protocol.py      ← provided (DO NOT MODIFY)
-    ├── test_sht.py           ← provided (DO NOT MODIFY)
-    ├── test_bloom.py         ← provided (DO NOT MODIFY)
-    ├── test_integration.py   ← provided (DO NOT MODIFY)
-    ├── test_worker_smoke.py  ← provided (DO NOT MODIFY)
-    └── test_chaos.py         ★ written — chaos / adversarial hardening suite
+└── starter/
+    ├── __init__.py           ← provided by Gentrix
+    ├── dsync_protocol.py     ★ SegHash · frame encoding · fragmentation
+    ├── sht.py                ★ 4-ary Segment Hash Tree
+    ├── bloom_filter.py       ★ Counting Bloom Filter (4-bit saturating)
+    ├── worker.py             ★ Worker coroutine · VectorClock
+    ├── engine.py             ★ DSyncEngine coordinator
+    └── utils.py              ← provided by Gentrix (DO NOT MODIFY)
 ```
 
-**★ = written as part of this submission.** All other files are provided by Gentrix.
+**★ = files written as part of this submission.**
+
+The following files are provided by Gentrix and are not included in this repository (place them alongside the above before running):
+
+```
+benchmark.py
+conftest.py
+tests/__init__.py
+tests/test_protocol.py
+tests/test_sht.py
+tests/test_bloom.py
+tests/test_integration.py
+tests/test_worker_smoke.py
+tests/test_chaos.py
+```
 
 ---
 
 ## 2. Quick Start
+
+After placing the Gentrix-provided test and benchmark files (see §1):
 
 ```bash
 # Run the full test suite
