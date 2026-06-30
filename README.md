@@ -24,26 +24,28 @@
 
 ```
 dsync/
-├── README.md                 ★ submission
-├── benchmark.py              ← Performance scenarios (DO NOT MODIFY)
-├── conftest.py
+├── README.md                 ★ written
+├── benchmark.py              ← provided (DO NOT MODIFY)
+├── conftest.py               ← provided (DO NOT MODIFY)
 ├── starter/
+│   ├── __init__.py           ← provided
 │   ├── dsync_protocol.py     ★ SegHash · frame encoding · fragmentation
 │   ├── sht.py                ★ 4-ary Segment Hash Tree
 │   ├── bloom_filter.py       ★ Counting Bloom Filter (4-bit saturating)
 │   ├── worker.py             ★ Worker coroutine · VectorClock
 │   ├── engine.py             ★ DSyncEngine coordinator
-│   └── utils.py              ← Dataset helpers (DO NOT MODIFY)
+│   └── utils.py              ← provided (DO NOT MODIFY)
 └── tests/
-    ├── test_protocol.py      ← SegHash and frame encoding tests (DO NOT MODIFY)
-    ├── test_sht.py           ← SHT correctness tests (DO NOT MODIFY)
-    ├── test_bloom.py         ← Bloom filter tests (DO NOT MODIFY)
-    ├── test_integration.py   ← End-to-end engine tests (DO NOT MODIFY)
-    ├── test_worker_smoke.py  ← VectorClock and Worker unit tests (DO NOT MODIFY)
-    └── test_chaos.py         ★ Chaos / adversarial hardening suite
+    ├── __init__.py           ← provided
+    ├── test_protocol.py      ← provided (DO NOT MODIFY)
+    ├── test_sht.py           ← provided (DO NOT MODIFY)
+    ├── test_bloom.py         ← provided (DO NOT MODIFY)
+    ├── test_integration.py   ← provided (DO NOT MODIFY)
+    ├── test_worker_smoke.py  ← provided (DO NOT MODIFY)
+    └── test_chaos.py         ★ written — chaos / adversarial hardening suite
 ```
 
-**★ = files to submit.** All other files are provided by Gentrix and must not be modified.
+**★ = written as part of this submission.** All other files are provided by Gentrix.
 
 ---
 
